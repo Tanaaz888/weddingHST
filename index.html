@@ -38,7 +38,7 @@
       const loader = document.getElementById("loader");
       err.textContent = "";
 
-      if (!name) { err.textContent = "Please enter your name."; return; } //text that appears
+      if (!name) { err.textContent = "Please enter your name."; return; } <!--text that appears-->
 
       loader.style.display = "flex";
 
@@ -50,7 +50,7 @@
 
         if (data.error) {
           loader.style.display = "none";
-          err.textContent = "Name not found — please check your spelling."; //text that appears
+          err.textContent = "Name not found — please check your spelling."; <!--text that appears-->
           return;
         }
 
@@ -59,7 +59,7 @@
 
       } catch (e) {
         loader.style.display = "none";
-        err.textContent = "Something went wrong. Please try again."; //text that appears
+        err.textContent = "Something went wrong. Please try again."; <!--text that appears-->
         console.error(e);
       }
     }
