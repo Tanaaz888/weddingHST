@@ -1,12 +1,152 @@
-/* Events section */
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #2c2c2a;
+  font-size: 15px;
+}
+
+/* ─── Welcome page ─── */
+.welcome-page {
+  min-height: 100vh;
+  background: url('YOUR_PHOTO_URL') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-overlay {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 48px 40px;
+  text-align: center;
+  max-width: 440px;
+  width: 90%;
+}
+
+.welcome-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.welcome-sub {
+  font-size: 15px;
+  color: #5f5e5a;
+  margin-bottom: 28px;
+}
+
+/* ─── Invite page ─── */
+.invite-page {
+  background: #faf9f6;
+  min-height: 100vh;
+}
+
+.invite-hero {
+  background: url('YOUR_PHOTO_URL') center 30% / cover no-repeat;
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+}
+
+.invite-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.invite-hero h1,
+.invite-hero .invite-sub {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+#guest-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.invite-sub {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.invite-content {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  text-align: left;
+}
+
+/* ─── Cards ─── */
+.card {
+  background: #fff;
+  border: 0.5px solid #d3d1c7;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888780;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  border-bottom: 0.5px solid #f1efe8;
+}
+
+.info-row:last-child { border-bottom: none; }
+
+.info-label {
+  font-size: 15px;
+  color: #5f5e5a;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ─── Party list ─── */
+.party-list { list-style: none; }
+
+.party-list li {
+  padding: 7px 0;
+  font-size: 15px;
+  border-bottom: 0.5px solid #f1efe8;
+}
+
+.party-list li:last-child { border-bottom: none; }
+
+/* ─── Events section ─── */
 .section-title {
-  font-size: 11px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #888780;
   margin: 24px 0 12px;
-  font-family: Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .event-banner {
@@ -26,6 +166,7 @@
 }
 
 .banner-title {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -36,5 +177,40 @@
   font-size: 13px;
   line-height: 1.8;
   opacity: 0.92;
-  font-family: Arial, sans-serif;
+}
+
+/* ─── Search box ─── */
+.search-box input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid #d3d1c7;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.search-box input:focus { border-color: #888780; }
+
+.search-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2c2c2a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.search-box button:hover { background: #444441; }
+
+.error-msg {
+  font-size: 13px;
+  color: #a32d2d;
+  margin-top: 10px;
+  min-height: 18px;
 }
