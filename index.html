@@ -15,18 +15,18 @@
   </div>
   
   <div class="welcome-overlay">
-    <h1 class="welcome-title">You're Invited</h1>
-    <p class="welcome-sub">Enter your name to view your personal invitation</p>
+    <h1 class="welcome-title">You're Invited</h1>  //text that appears
+    <p class="welcome-sub">Enter your name to view your personal invitation</p> //text that appears
 
     <div class="search-box">
-      <input id="nameInput" type="text" placeholder="Your first name" autocomplete="off" />
-      <button onclick="findGuest()">Find my invitation</button>
+      <input id="nameInput" type="text" placeholder="Your first name" autocomplete="off" />  //text that appears
+      <button onclick="findGuest()">Find my invitation</button>   //text that appears
       <p id="error-msg" class="error-msg"></p>
     </div>
     
     <div class="photo-upload">
-      <p>Please upload your wedding photos</p>
-      <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank">Upload here</a>
+      <p>Please upload your wedding photos</p>  //text that appears
+      <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank">Upload here</a>   //text that appears
     </div>
   </div>
 
@@ -38,14 +38,14 @@
       const err = document.getElementById("error-msg");
       err.textContent = "";
 
-      if (!name) { err.textContent = "Please enter your name."; return; }
+      if (!name) { err.textContent = "Please enter your name."; return; }   //text that appears
 
       try {
         const res = await fetch(`${API_URL}?name=${encodeURIComponent(name)}`);
         const data = await res.json();
 
         if (data.error) {
-          err.textContent = "Name not found — please check your spelling.";
+          err.textContent = "Name not found — please check your spelling.";   //text that appears
           return;
         }
 
@@ -54,7 +54,7 @@
         loader.style.display = "flex";
         window.location.href = "invite.html";
       } catch {
-        err.textContent = "Something went wrong. Please try again.";
+        err.textContent = "Something went wrong. Please try again.";  //text that appears
       }
     }
 
