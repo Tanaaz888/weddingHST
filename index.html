@@ -9,52 +9,58 @@
   
 <body class="welcome-page">
   
-  <div id="loader" style="display:none; position:fixed; inset:0; background:rgba(255,255,255,0.85); z-index:999; display:none; align-items:center; justify-content:center; flex-direction:column; gap:12px;">
+  <div id="loader" style="display:none; position:fixed; inset:0; background:rgba(255,255,255,0.85); z-index:999; align-items:center; justify-content:center; flex-direction:column; gap:12px;">
     <div class="spinner"></div>
     <p style="font-family:'Times New Roman',serif; font-size:14px; color:#5f5e5a;">Finding your invitation...</p>
   </div>
   
   <div class="welcome-overlay">
-    <h1 class="welcome-title">You're Invited</h1>  //text that appears
-    <p class="welcome-sub">Enter your name to view your personal invitation</p> //text that appears
-
+    <h1 class="welcome-title">You're Invited</h1>  <!--text that appears-->
+    <p class="welcome-sub">Enter your name to view your personal invitation</p> <!--text that appears-->
     <div class="search-box">
-      <input id="nameInput" type="text" placeholder="Your first name" autocomplete="off" />  //text that appears
-      <button onclick="findGuest()">Find my invitation</button>   //text that appears
+      <input id="nameInput" type="text" placeholder="Your first name" autocomplete="off" />  <!--text that appears-->
+      <button onclick="findGuest()">Find my invitation</button>   <!--text that appears-->
       <p id="error-msg" class="error-msg"></p>
     </div>
     
     <div class="photo-upload">
-      <p>Please upload your wedding photos</p>  //text that appears
-      <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank">Upload here</a>   //text that appears
+      <p>Please upload your wedding photos</p>  <!--text that appears-->
+      <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank">Upload here</a>   <!--text that appears-->
     </div>
   </div>
 
   <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbw_ZDn0G-LgRzmjvsgVSWnTSmRHm065_JZ3N9mBsqVBPBK0D0gZpLjsyCMp_d5HHAAJ/exec"; //change sheets URL to latest deployment URl
+    const API_URL = "https://script.google.com/macros/s/AKfycbw_ZDn0G-LgRzmjvsgVSWnTSmRHm065_JZ3N9mBsqVBPBK0D0gZpLjsyCMp_d5HHAAJ/exec"; //change sheets URL to latest deployment URL
 
     async function findGuest() {
       const name = document.getElementById("nameInput").value.trim();
       const err = document.getElementById("error-msg");
+      const loader = document.getElementById("loader");
       err.textContent = "";
 
-      if (!name) { err.textContent = "Please enter your name."; return; }   //text that appears
+      if (!name) { err.textContent = "Please enter your name."; return; } //text that appears
+
+      loader.style.display = "flex";
 
       try {
-        const res = await fetch(`${API_URL}?name=${encodeURIComponent(name)}`);
+        const res = await fetch(`${API_URL}?name=${encodeURIComponent(name)}`, {
+          redirect: "follow"
+        });
         const data = await res.json();
 
         if (data.error) {
-          err.textContent = "Name not found — please check your spelling.";   //text that appears
+          loader.style.display = "none";
+          err.textContent = "Name not found — please check your spelling."; //text that appears
           return;
         }
 
         sessionStorage.setItem("guestData", JSON.stringify(data));
-        const loader = document.getElementById("loader");
-        loader.style.display = "flex";
         window.location.href = "invite.html";
-      } catch {
-        err.textContent = "Something went wrong. Please try again.";  //text that appears
+
+      } catch (e) {
+        loader.style.display = "none";
+        err.textContent = "Something went wrong. Please try again."; //text that appears
+        console.error(e);
       }
     }
 
