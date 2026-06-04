@@ -6,8 +6,14 @@
   <title>Our Wedding</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  
 <body class="welcome-page">
-
+  
+  <div id="loader" style="display:none; position:fixed; inset:0; background:rgba(255,255,255,0.85); z-index:999; display:none; align-items:center; justify-content:center; flex-direction:column; gap:12px;">
+    <div class="spinner"></div>
+    <p style="font-family:'Times New Roman',serif; font-size:14px; color:#5f5e5a;">Finding your invitation...</p>
+  </div>
+  
   <div class="welcome-overlay">
     <h1 class="welcome-title">You're Invited</h1>
     <p class="welcome-sub">Enter your name to view your personal invitation</p>
@@ -17,6 +23,7 @@
       <button onclick="findGuest()">Find my invitation</button>
       <p id="error-msg" class="error-msg"></p>
     </div>
+    
     <div class="photo-upload">
       <p>Please upload your wedding photos</p>
       <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank">Upload here</a>
@@ -43,6 +50,8 @@
         }
 
         sessionStorage.setItem("guestData", JSON.stringify(data));
+        const loader = document.getElementById("loader");
+        loader.style.display = "flex";
         window.location.href = "invite.html";
       } catch {
         err.textContent = "Something went wrong. Please try again.";
