@@ -214,3 +214,36 @@ body {
   margin-top: 10px;
   min-height: 18px;
 }
+/* Additional info banner */
+.info-banner {
+  margin-top: 8px;
+}
+
+.info-banner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2c2c2a;
+}
+
+/* Photo upload section */
+.photo-upload {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 0.5px solid #d3d1c7;
+}
+
+.photo-upload p {
+  font-size: 12px;
+  color: #888780;
+  margin-bottom: 6px;
+}
+
+.photo-upload a {
+  font-size: 12px;
+  color: #2c2c2a;
+  text-decoration: underline;
+}
+
+.photo-upload a:hover {
+  color: #888780;
+}
