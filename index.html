@@ -30,7 +30,7 @@
       if (!name) { err.textContent = "Please enter your name."; return; }
 
       try {
-        const res = await fetch(`${https://script.google.com/macros/s/AKfycbw_ZDn0G-LgRzmjvsgVSWnTSmRHm065_JZ3N9mBsqVBPBK0D0gZpLjsyCMp_d5HHAAJ/exec}?name=${encodeURIComponent(name)}`);
+        const res = await fetch(`${API_URL}?name=${encodeURIComponent(name)}`);
         const data = await res.json();
 
         if (data.error) {
