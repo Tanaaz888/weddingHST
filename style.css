@@ -243,7 +243,18 @@ body {
   color: #2c2c2a;
   text-decoration: underline;
 }
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #d3d1c7;
+  border-top-color: #2c2c2a;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 .photo-upload a:hover {
   color: #888780;
 }
