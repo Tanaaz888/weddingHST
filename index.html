@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-page">
+
+  <div class="welcome-overlay">
+    <h1 class="welcome-title">You're Invited</h1>
+    <p class="welcome-sub">Enter your name to view your personal invitation</p>
+
+    <div class="search-box">
+      <input id="nameInput" type="text" placeholder="Your first name" autocomplete="off" />
+      <button onclick="findGuest()">Find my invitation</button>
+      <p id="error-msg" class="error-msg"></p>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbwmQvC-9IrylHcVMOWcHUqnsO-WaBY4xOksWSC6-wJ0aYL0uxaEvspRbbTC1uRWW4rE/exec";
+
+    async function findGuest() {
+      const name = document.getElementById("nameInput").value.trim();
+      const err = document.getElementById("error-msg");
+      err.textContent = "";
+
+      if (!name) { err.textContent = "Please enter your name."; return; }
+
+      try {
+        const res = await fetch(`${API_URL}?name=${encodeURIComponent(name)}`);
+        const data = await res.json();
+
+        if (data.error) {
+          err.textContent = "Name not found — please check your spelling.";
+          return;
+        }
+
+        sessionStorage.setItem("guestData", JSON.stringify(data));
+        window.location.href = "invite.html";
+      } catch {
+        err.textContent = "Something went wrong. Please try again.";
+      }
+    }
+
+    document.getElementById("nameInput").addEventListener("keydown", e => {
+      if (e.key === "Enter") findGuest();
+    });
+  </script>
+</body>
+</html>
