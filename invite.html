@@ -111,8 +111,17 @@
     const guest = JSON.parse(raw);
 
     document.getElementById("guest-name").textContent = `Welcome, ${guest.name}`;
-    document.getElementById("hotel").textContent = guest.hotel;
-    document.getElementById("room").textContent = guest.room;
+    // Check if vidhi-only guest
+    const events = ["mehndi","haldi","sangeet","vidhi","tea_ceremony","afterparty"];
+    const invitedEvents = events.filter(ev => (guest[ev] || "").toString().toUpperCase() === "YES");
+    const vidhiOnly = invitedEvents.length === 1 && invitedEvents[0] === "vidhi";
+
+if (vidhiOnly) {
+  document.querySelector(".card").style.display = "none"; // hides accommodation card
+} else {
+  document.getElementById("hotel").textContent = guest.hotel;
+  document.getElementById("room").textContent = guest.room;
+}
 
     // Party members
     const partyCard = document.getElementById("party-card");
