@@ -1,0 +1,40 @@
+/* Events section */
+.section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888780;
+  margin: 24px 0 12px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+.event-banner {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner-overlay {
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 100%);
+  padding: 20px;
+  color: #fff;
+}
+
+.banner-title {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.banner-details p {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.92;
+  font-family: Arial, sans-serif;
+}
