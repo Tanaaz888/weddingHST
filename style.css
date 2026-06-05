@@ -68,6 +68,15 @@ body {
   color: #fff;
 }
 
+.invite-photos a {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.invite-photos a:hover {
+  opacity: 1;
+}
 #guest-name {
   font-family: 'Times New Roman', Times, serif;
   font-size: 32px;
