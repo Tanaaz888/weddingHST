@@ -269,3 +269,19 @@ body {
 .photo-upload a:hover {
   color: #888780;
 }
+.back-btn-wrap {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.back-btn {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
