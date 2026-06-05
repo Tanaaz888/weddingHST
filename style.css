@@ -49,7 +49,7 @@ body {
 
 /* Hero — replace YOUR_INVITE_HERO_URL with your raw GitHub image URL */
 .invite-hero {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
+  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/invite%20banner%20placeholder.jpg') center center / cover no-repeat;
   padding: 100px 20px 80px;
   text-align: center;
   position: relative;
@@ -87,13 +87,14 @@ body {
   margin: 0 auto;
   padding: 32px 20px 60px;
   text-align: left;
-}
+  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center top / cover no-repeat;
+  border-radius: 12px;
 }
 
-.invite-page {e%20placeholder.jpg') center top / cover no-repeat;/> -->
+.invite-page {
+  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center top / cover no-repeat;
   min-height: 100vh;
-  background: #faf9f6;            
-
+}
 /* ─── Cards ─── */
 .card {
   background: rgba(255,255,255,0.88);
@@ -161,6 +162,7 @@ body {
   margin-bottom: 12px;
   min-height: 160px;
   display: flex;
+  align-items: stretch;
   align-items: flex-end;
 }
 
@@ -171,6 +173,12 @@ body {
   backdrop-filter: blur(2px);
 }
 
+.banner-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
 .banner-overlay {
   width: 100%;
   padding: 20px;
@@ -178,6 +186,7 @@ body {
   backdrop-filter: blur(2px);
   border-radius: 12px;
 }
+
 .banner-details p {
   font-size: 13px;
   line-height: 1.8;
@@ -185,17 +194,7 @@ body {
 }
 
 /* ─── Additional info banner ─── */
-.info-banner {
-  margin-top: 8px;
-  background: #fff;
-  border-radius: 0;
-  border: none;
-  border-top: 0.5px solid #d3d1c7;
-  padding: 32px 20px;
-  max-width: 100%;
-  margin-left: -20px;
-  margin-right: -20px;
-}
+.info-banner { margin-top: 8px; }
 
 .info-banner-text {
   font-size: 15px;
