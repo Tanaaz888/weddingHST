@@ -1,3 +1,4 @@
+@@ -1,266 +1,259 @@
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -91,12 +92,9 @@ body {
   border-radius: 12px;
 }
 
-.invite-page {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center top / cover no-repeat;
-  min-height: 100vh;
-}
 /* ─── Cards ─── */
 .card {
+  background: #fff;
   background: rgba(255,255,255,0.88);
   border: 0.5px solid #d3d1c7;
   border-radius: 12px;
@@ -156,14 +154,18 @@ body {
   font-weight: 400;
 }
 
-.event-banner {
+/* Single background image behind all event banners */
+/* Replace YOUR_EVENTS_BG_URL with your raw GitHub image URL */
+.events-background {
+  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 12px;
-  min-height: 160px;
+  margin-bottom: 16px;
+}
+
+.event-banner {
   display: flex;
   align-items: stretch;
-  align-items: flex-end;
 }
 
 .banner-overlay {
@@ -179,12 +181,6 @@ body {
   font-weight: 400;
   letter-spacing: 0.04em;
   margin-bottom: 10px;
-.banner-overlay {
-  width: 100%;
-  padding: 20px;
-  color: #fff;
-  backdrop-filter: blur(2px);
-  border-radius: 12px;
 }
 
 .banner-details p {
