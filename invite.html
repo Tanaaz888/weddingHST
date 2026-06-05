@@ -25,12 +25,11 @@
         <span class="info-label">Room</span>  
         <span id="room" class="info-value"></span>
       </div>
-      
-      <div id="party-section">
-        <div class="card-divider"></div>
+    </div>
+   
+    <div class="card" id="party-card">
         <h2 class="card-title" style="margin-top: 14px;">Your Party</h2>
         <ul id="party-list" class="party-list"></ul>
-      </div>
     </div>
 
 
@@ -131,7 +130,7 @@ if (vidhiOnly) {
 }
 
     // Party members
-    const partySection = document.getElementById("party-section");
+    const partyCard = document.getElementById("party-card");
     const partyList = document.getElementById("party-list");
     if (guest.party && guest.party.length > 0) {
       guest.party.forEach(member => {
@@ -140,8 +139,8 @@ if (vidhiOnly) {
         partyList.appendChild(li);
       });
     } else {
-      partySection.style.display = "none";
-    }
+      partyCard.style.display = "none";
+    } 
 
     // Event banners
     const eventsList = document.getElementById("events-list");
