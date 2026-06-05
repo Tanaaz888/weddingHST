@@ -165,9 +165,10 @@ body {
 
 .banner-overlay {
   width: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 100%);
   padding: 20px;
   color: #fff;
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
 }
 
 .banner-title {
