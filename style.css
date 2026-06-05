@@ -49,7 +49,7 @@ body {
 
 /* Hero — replace YOUR_INVITE_HERO_URL with your raw GitHub image URL */
 .invite-hero {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/invite%20banner%20placeholder.jpg') center center / cover no-repeat;
+  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
   padding: 100px 20px 80px;
   text-align: center;
   position: relative;
@@ -88,11 +88,12 @@ body {
   padding: 32px 20px 60px;
   text-align: left;
 }
-
-.invite-page {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center top / cover no-repeat;
-  min-height: 100vh;
 }
+
+.invite-page {e%20placeholder.jpg') center top / cover no-repeat;/> -->
+  min-height: 100vh;
+  background: #faf9f6;            
+
 /* ─── Cards ─── */
 .card {
   background: rgba(255,255,255,0.88);
@@ -184,7 +185,17 @@ body {
 }
 
 /* ─── Additional info banner ─── */
-.info-banner { margin-top: 8px; }
+.info-banner {
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 0;
+  border: none;
+  border-top: 0.5px solid #d3d1c7;
+  padding: 32px 20px;
+  max-width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+}
 
 .info-banner-text {
   font-size: 15px;
