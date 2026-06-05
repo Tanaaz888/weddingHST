@@ -169,7 +169,7 @@ body {
   margin-bottom: 16px;
   min-height: 200px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .banner-overlay {
