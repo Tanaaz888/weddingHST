@@ -1,4 +1,3 @@
-@@ -1,266 +1,259 @@
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,6 +11,7 @@ body {
 /* ─── Welcome page ─── */
 .welcome-page {
   min-height: 100vh;
+  background: url('https://github.com/Tanaaz888/weddingHST/blob/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
   background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -48,10 +48,9 @@ body {
   min-height: 100vh;
 }
 
-/* Hero — replace YOUR_INVITE_HERO_URL with your raw GitHub image URL */
 .invite-hero {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/invite%20banner%20placeholder.jpg') center center / cover no-repeat;
-  padding: 100px 20px 80px;
+  background: url('YOUR_PHOTO_URL') center 30% / cover no-repeat;
+  padding: 80px 20px 60px;
   text-align: center;
   position: relative;
 }
@@ -60,7 +59,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.38);
+  background: rgba(0,0,0,0.35);
 }
 
 .invite-hero h1,
@@ -88,14 +87,11 @@ body {
   margin: 0 auto;
   padding: 32px 20px 60px;
   text-align: left;
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center top / cover no-repeat;
-  border-radius: 12px;
 }
 
 /* ─── Cards ─── */
 .card {
   background: #fff;
-  background: rgba(255,255,255,0.88);
   border: 0.5px solid #d3d1c7;
   border-radius: 12px;
   padding: 20px 24px;
@@ -154,25 +150,20 @@ body {
   font-weight: 400;
 }
 
-/* Single background image behind all event banners */
-/* Replace YOUR_EVENTS_BG_URL with your raw GitHub image URL */
-.events-background {
-  background: url('https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg') center center / cover no-repeat;
+.event-banner {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 16px;
-}
-
-.event-banner {
+  min-height: 200px;
   display: flex;
-  align-items: stretch;
+  align-items: flex-end;
 }
 
 .banner-overlay {
   width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 100%);
   padding: 20px;
   color: #fff;
-  backdrop-filter: blur(2px);
 }
 
 .banner-title {
@@ -188,36 +179,6 @@ body {
   line-height: 1.8;
   opacity: 0.92;
 }
-
-/* ─── Additional info banner ─── */
-.info-banner { margin-top: 8px; }
-
-.info-banner-text {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #2c2c2a;
-}
-
-/* ─── Photo upload ─── */
-.photo-upload {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 0.5px solid #d3d1c7;
-}
-
-.photo-upload p {
-  font-size: 12px;
-  color: #888780;
-  margin-bottom: 6px;
-}
-
-.photo-upload a {
-  font-size: 12px;
-  color: #2c2c2a;
-  text-decoration: underline;
-}
-
-.photo-upload a:hover { color: #888780; }
 
 /* ─── Search box ─── */
 .search-box input {
@@ -254,8 +215,35 @@ body {
   margin-top: 10px;
   min-height: 18px;
 }
+/* Additional info banner */
+.info-banner {
+  margin-top: 8px;
+}
 
-/* ─── Spinner ─── */
+.info-banner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2c2c2a;
+}
+
+/* Photo upload section */
+.photo-upload {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 0.5px solid #d3d1c7;
+}
+
+.photo-upload p {
+  font-size: 12px;
+  color: #888780;
+  margin-bottom: 6px;
+}
+
+.photo-upload a {
+  font-size: 12px;
+  color: #2c2c2a;
+  text-decoration: underline;
+}
 .spinner {
   width: 36px;
   height: 36px;
@@ -267,4 +255,7 @@ body {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+.photo-upload a:hover {
+  color: #888780;
 }
