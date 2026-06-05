@@ -143,11 +143,6 @@ body {
 
 .party-list li:last-child { border-bottom: none; }
 
-.card-divider {
-  border: none;
-  border-top: 0.5px solid #d3d1c7;
-  margin: 14px 0;
-}
 /* ─── Events section ─── */
 .section-title {
   font-family: 'Times New Roman', Times, serif;
