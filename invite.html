@@ -9,100 +9,103 @@
 <body class="invite-page">
 
   <div class="invite-hero">
-    <h1 id="guest-name">Welcome</h1> 
-    <p class="invite-sub">Here are your wedding details</p>  
+    <h1 id="guest-name">Welcome</h1>
+    <p class="invite-sub">Here are your wedding details</p>
   </div>
 
   <div class="invite-content">
 
     <div class="card">
-      <h2 class="card-title">Accommodation</h2> 
+      <h2 class="card-title">Accommodation</h2>
       <div class="info-row">
-        <span class="info-label">Hotel</span> 
+        <span class="info-label">Hotel</span>
         <span id="hotel" class="info-value"></span>
       </div>
       <div class="info-row">
-        <span class="info-label">Room</span>  
+        <span class="info-label">Room</span>
         <span id="room" class="info-value"></span>
       </div>
     </div>
 
     <div class="card" id="party-card">
-      <h2 class="card-title">Your party</h2> 
+      <h2 class="card-title">Your party</h2>
       <ul id="party-list" class="party-list"></ul>
     </div>
 
     <div id="events-section">
-      <h2 class="section-title">Your events</h2> 
-      <div id="events-list"></div>
+      <h2 class="section-title">Your events</h2>
+      <div id="events-list" class="events-background">
+        <!-- event banners injected here -->
+      </div>
     </div>
+
+    <div class="bottom-image">
+      <!-- Replace with your raw GitHub image URL -->
+      <img src="https://raw.githubusercontent.com/Tanaaz888/weddingHST/main/website%20placeholders/welcome%20placeholder.jpg"
+    </div>
+
     <div class="card info-banner">
-      <h2 class="card-title">Additional Information</h2> 
+      <h2 class="card-title">Additional Information</h2>
       <p class="info-banner-text">Your additional info here</p>
     </div>
+
   </div>
 
   <script>
     const EVENTS = [
       {
         key: "mehndi",
-        label: "Mehndi",  // text that appears
-        date: "Friday, 26 February 2026",  // text that appears
-        time: "12:00 PM – 6:00 PM",  // text that appears
-        location: "Harmony",  // text that appears
-        outfit: "Casual",  // text that appears
-        color: "#c8a96e"
-        // image: "url('YOUR_MEHNDI_BANNER_URL')"
+        label: "Mehndi",
+        date: "Friday, 26 February 2026",
+        time: "12:00 PM – 6:00 PM",
+        location: "Harmony",
+        outfit: "Casual",
+        color: "rgba(180, 140, 80, 0.6)"
       },
       {
         key: "haldi",
-        label: "Haldi",  // text that appears
-        date: "Saturday, 27 February 2026",  // text that appears
-        time: "1:00 PM – 4:00 PM",  // text that appears
-        location: "Swimming Pool, Golden Fields Resort",  // text that appears
-        outfit: "Pastels, Light clothing!",  // text that appears
-        color: "#e2b04a"
-        // image: "url('YOUR_HALDI_BANNER_URL')"
+        label: "Haldi",
+        date: "Saturday, 27 February 2026",
+        time: "1:00 PM – 4:00 PM",
+        location: "Swimming Pool, Golden Fields Resort",
+        outfit: "Pastels, Light clothing!",
+        color: "rgba(210, 160, 60, 0.6)"
       },
       {
         key: "sangeet",
-        label: "Sangeet",  // text that appears
-        date: "Saturday, 27 February 2026",  // text that appears
-        time: "7:00 PM – 11:00 PM",  // text that appears
-        location: "Lawn, Golden Fields Resort",  // text that appears
-        outfit: "Fun — bright colours welcome",  // text that appears
-        color: "#a06080"
-        // image: "url('YOUR_SANGEET_BANNER_URL')"
+        label: "Sangeet",
+        date: "Saturday, 27 February 2026",
+        time: "7:00 PM – 11:00 PM",
+        location: "Lawn, Golden Fields Resort",
+        outfit: "Fun — bright colours welcome",
+        color: "rgba(140, 70, 110, 0.6)"
       },
       {
         key: "vidhi",
-        label: "Vidhi",  // text that appears
-        date: "Sunday, 28 February 2026",  // text that appears
-        time: "9:00 AM – 12:00 PM",  // text that appears
-        location: "Lawn, Golden Fields Resort",  // text that appears
-        outfit: "Traditional formal - Greens, Golds, Pinks, Whites",  // text that appears
-        color: "#7a9e7e"
-        // image: "url('YOUR_VIDHI_BANNER_URL')"
+        label: "Vidhi",
+        date: "Sunday, 28 February 2026",
+        time: "9:00 AM – 12:00 PM",
+        location: "Lawn, Golden Fields Resort",
+        outfit: "Traditional formal - Greens, Golds, Pinks, Whites",
+        color: "rgba(100, 140, 100, 0.6)"
       },
       {
         key: "tea_ceremony",
-        label: "Tea Ceremony",  // text that appears
-        date: "Sunday, 28 February 2026",  // text that appears
-        time: "4:00 PM – 5:00 PM",  // text that appears
-        location: "Pavillion, Golden Fields Resort",  // text that appears
-        outfit: "Up to you",  // text that appears
-        color: "#c47a5a"
-        // image: "url('YOUR_TEA_BANNER_URL')"
+        label: "Tea Ceremony",
+        date: "Sunday, 28 February 2026",
+        time: "4:00 PM – 5:00 PM",
+        location: "Pavillion, Golden Fields Resort",
+        outfit: "Up to you",
+        color: "rgba(180, 100, 70, 0.6)"
       },
       {
         key: "afterparty",
-        label: "Afterparty",  // text that appears
-        date: "Sunday, 28 February 2026",  // text that appears
-        time: "7:00 PM – 12.00 AM",  // text that appears
-        location: "Pavillion, Golden Fields Resort",  // text that appears
-        outfit: "Casual",  // text that appears
-        color: "#3a3a4a"
-        // image: "url('YOUR_AFTERPARTY_BANNER_URL')"
+        label: "Afterparty",
+        date: "Sunday, 28 February 2026",
+        time: "7:00 PM – 12:00 AM",
+        location: "Pavillion, Golden Fields Resort",
+        outfit: "Casual",
+        color: "rgba(50, 50, 65, 0.6)"
       }
     ];
 
@@ -111,17 +114,18 @@
     const guest = JSON.parse(raw);
 
     document.getElementById("guest-name").textContent = `Welcome, ${guest.name}`;
+
     // Check if vidhi-only guest
-    const events = ["mehndi","haldi","sangeet","vidhi","tea_ceremony","afterparty"];
-    const invitedEvents = events.filter(ev => (guest[ev] || "").toString().toUpperCase() === "YES");
+    const eventKeys = ["mehndi","haldi","sangeet","vidhi","tea_ceremony","afterparty"];
+    const invitedEvents = eventKeys.filter(ev => (guest[ev] || "").toString().toUpperCase() === "YES");
     const vidhiOnly = invitedEvents.length === 1 && invitedEvents[0] === "vidhi";
 
-if (vidhiOnly) {
-  document.querySelector(".card").style.display = "none"; // hides accommodation card
-} else {
-  document.getElementById("hotel").textContent = guest.hotel;
-  document.getElementById("room").textContent = guest.room;
-}
+    if (vidhiOnly) {
+      document.querySelector(".card").style.display = "none";
+    } else {
+      document.getElementById("hotel").textContent = guest.hotel;
+      document.getElementById("room").textContent = guest.room;
+    }
 
     // Party members
     const partyCard = document.getElementById("party-card");
@@ -142,15 +146,8 @@ if (vidhiOnly) {
       if ((guest[ev.key] || "").toString().toUpperCase() === "YES") {
         const banner = document.createElement("div");
         banner.className = "event-banner";
-
-        // When you have an image, comment out the line below and uncomment the one after
-        banner.style.background = ev.color;
-        // banner.style.background = ev.image + ", " + ev.color;
-        banner.style.backgroundSize = "cover";
-        banner.style.backgroundPosition = "center";
-
         banner.innerHTML = `
-          <div class="banner-overlay">
+          <div class="banner-overlay" style="background:${ev.color};">
             <h3 class="banner-title">${ev.label}</h3>
             <div class="banner-details">
               <p>📅 ${ev.date}</p>
